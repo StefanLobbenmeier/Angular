@@ -11,6 +11,8 @@ import { BindingClassesComponent } from './binding-classes/binding-classes.compo
 import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { TemplateReferenceComponent } from './template-reference/template-reference.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
+import { ParentChildComponent } from './parent-child/parent-child.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
     BindingClassesComponent,
     StyleBindingComponent,
     TemplateReferenceComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    StructuralDirectivesComponent,
+    ParentChildComponent
   ],
   imports: [
     BrowserModule,

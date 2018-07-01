@@ -1,0 +1,52 @@
+<h2 *ngIf="false">
+  ngIf false
+</h2>
+<h2 *ngIf="true">
+  ngIf true
+</h2>
+
+<h2 *ngIf="displayName; else elseBlock1">
+  displayName is true
+</h2>
+  
+<ng-template #elseBlock1>
+  <h2>
+    elseBlock1 displayName is not true
+  </h2>
+
+</ng-template>
+
+<div *ngIf="displayName; then thenBlock2; else elseBlock2"></div>
+
+<ng-template #thenBlock2>
+  <h2>
+    thenBlock2 displayName is not true
+  </h2>
+
+</ng-template>
+<ng-template #elseBlock2>
+  <h2>
+    elseBlock2 displayName is not true
+  </h2>
+
+</ng-template>
+
+<div [style.color]="color"  [ngSwitch]="color">
+  <h2 *ngSwitchCase="'red'">You picked red</h2>
+  <h2 *ngSwitchCase="'green'">You picked green</h2>
+  <h2 *ngSwitchCase="'blue'">You picked blue</h2>
+  <h2 *ngSwitchDefault>Pick again</h2>
+
+</div>
+
+<div *ngFor="let color of colors; index as index; first as first; last as last; even as even; odd as odd;">
+  <button (click)="onClick(color)">
+    {{index}} 
+    {{color}} 
+    {{first ? "first" : ""}}
+    {{last ? "last" : ""}}
+    {{even ? "even" : ""}}
+    {{odd ? "odd" : ""}}
+  </button>
+
+</div>
